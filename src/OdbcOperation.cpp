@@ -62,7 +62,7 @@ namespace mssql
                 argc = 3;
             }
 
-            callback->Call(Undefined().As<Object>(), argc, args);
+            callback->Call(Context::GetCurrent()->Global(), argc, args);
         }
 
         callback.Dispose();
